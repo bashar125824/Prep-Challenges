@@ -19,13 +19,15 @@
 //  
 
 const arrInc = (arr) => {
-    let result = [];
+   let result = [];
     arr.forEach(item => {
         result.push(item+10);
     });
     // write your code here
     return result;
 };
+  
+
 // -------------------------------------------------------------------------------------------------------
 
 
@@ -41,7 +43,8 @@ const arrInc = (arr) => {
 //  [5, 6, 7, 7]
 // 
 const roundDecimals = (arr) => {
-    let result = [];
+
+ let result = [];
     arr.forEach(item => {
         if(item*10 % 10 >= 5){
             result.push(Math.ceil(item));
@@ -51,8 +54,6 @@ const roundDecimals = (arr) => {
     // write your code here
     return result;
 };
-    // write your code here
-
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -120,7 +121,9 @@ const roundDecimals = (arr) => {
 //
 
 const employeesBonus = (arr) => {
-    let result = [];
+    l
+
+           let result = [];
     arr.forEach(item => {
         if (item.section === "Production") {
             if (item.workHours > 8){
@@ -132,7 +135,6 @@ const employeesBonus = (arr) => {
     });
     
     return result;
-    // write your code here
 }
 // -------------------------------------------------------------------------------------------------------
 
