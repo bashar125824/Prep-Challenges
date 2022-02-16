@@ -99,16 +99,20 @@ const objLat = (obj) => {
 
 const cvFormatter = (arr) => {
     let newarr = [];
-    for(let i = 0 ; i < arr.length - 1 ; i++){
+    for(let i = 0 ; i < arr.length ; i++){
         if (arr[i].yearsOfExperience > 1){
-          if  (arr[i].LastName == "null"){
-              arr[i] = { [arr[i].firstName]:[arr[i].tech]}
-          }
-             arr[i] = { [arr[i].firstName]:[arr[i].LastName] [arr[i].tech] };
-             newarr.push(arr[i]);
-            return newarr ;
+              let applicant = {
+                  fullName: (arr[i].lastName !== null) ? `${arr[i].firstName} ${arr[i].lastName}` : `${(arr[i].firstName)}` ,
+                  tech: arr[i].tech
+
+              }
+              newarr.push(applicant);
+          
+        
         }  
-    }  // write your code here
+       
+        }  
+    return newarr;// write your code here
 };
 // -------------------------------------------------------------------------------------------------------
 
