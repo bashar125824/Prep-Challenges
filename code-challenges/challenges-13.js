@@ -42,7 +42,7 @@ const objectCounter = (obj) => {
     let counter = 0;
     let countObject = [];
     countObject = obj.reduce(
-        (element , nextElement) => counter++,counter
+        (element) => counter++,counter
 
     );
     // write your code here
@@ -67,7 +67,7 @@ const objectCounter = (obj) => {
 
 const stringReverse = (str) => {
 
-    return str.split(' ').reduce((rev, char) => char + " " + rev, "").trim();
+    return str.split(' ').reduce((rev, char) => char + " " + rev).trim();
 
     // write your code here
 
