@@ -39,8 +39,8 @@ const detectFace = (arr) => {
     let newArr = [];
     let result = arr.filter((element) => {
         let regex1 = /(\^)/g;
-        let regex2 = /(\-)/g;
-        if (regex1.test(element) == true && regex2.test(element) == false)
+        let regex2 = /(\-$)/g;
+        if (regex1.test(element) == true && regex2.test(element) == true)
             newArr.push(element);
 
     })
