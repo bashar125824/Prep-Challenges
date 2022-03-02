@@ -16,10 +16,10 @@
 
 const recursionPattern = (int1, int2) => {
     let arr = [];
-    if (int1 < 0)
-       return int1;
+    if (int1 - int2 < 0)
+        arr.push(int2);
     else
-        arr.push(recursionPattern(int1 - int2, int1));
+        arr.push(recursionPattern(int1 - int2 , int1));
 
     return arr;
     // write your code here
