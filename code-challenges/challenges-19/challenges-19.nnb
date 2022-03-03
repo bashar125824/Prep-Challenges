@@ -1,0 +1,108 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Append And Delete](https://www.hackerrank.com/challenges/append-and-delete/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": ["
+            
+            function appendAndDelete(s, t, k) {
+
+
+                   let length1 = s.length;
+                   let length2 = t.length;
+
+                   let L = new Array(length1 + 1);
+
+                   let i, j;
+
+                for (i = 0; i <= length1; i++) {
+                   L[i] = new Array(length2 + 1);
+                    for (j = 0; j <= length1; j++) {
+                     L[i][j] = 0;
+                    }
+                }
+
+                for (i = 0; i <= length1; i++) {
+                   for (j = 0; j <= length2; j++) {
+                    if (i == 0 || j == 0)
+                      L[i][j] = 0;
+
+                    else if (s[i - 1]== t[j - 1])
+                      L[i][j] = L[i - 1][j - 1] + 1;
+
+                    else
+                      L[i][j] = Math.max(L[i - 1][j],
+                      L[i][j - 1]);
+                   }
+                }
+
+
+                let minNumberofDeletions = length1 - L[length1][length2];
+                let minNumberofAdditions = length2 - L[length1][length2];
+
+                if ((minNumberofDeletions + minNumberofAdditions) > k || length2 > length1)
+                 return "No";
+                else if((minNumberofDeletions + minNumberofAdditions) <= k)
+                 return "Yes";
+
+            }
+                 "],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Encryption](https://www.hackerrank.com/challenges/encryption/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [The Time In Words](https://www.hackerrank.com/challenges/the-time-in-words/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
